@@ -1,7 +1,7 @@
 const Web3 = require('web3')
 var web3 = new Web3(new Web3.providers.HttpProvider("https://eth-goerli.g.alchemy.com/v2/Jqrhj3Bzv-oFnGwj7mMySkd6WJUEhgmy"));
 const account = "0x91cDa83c363A6F72f81A2041836b1e79b4a01Ab1";
-const address = "0x42366d71FFb5176B45f92CB26267C5411f7A30d6";
+const address = "0xcdF80feb07698544EdB40f05BAE525dE5f0FB437";
 const ABI = [
 	{
 		"inputs": [
@@ -32,7 +32,7 @@ const ABI = [
 		],
 		"name": "increase",
 		"outputs": [],
-		"stateMutability": "nonpayable",
+		"stateMutability": "payable",
 		"type": "function"
 	}
 ]
@@ -305,7 +305,7 @@ async function increaseOtherContract() {
     let tx = {
         from: account,
         to: address,
-        gas: 500000,
+        gas: 520000,
         value: 50000,
         data: myContract.methods.increase(otherAddress).encodeABI()
     }
