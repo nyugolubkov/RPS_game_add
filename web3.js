@@ -1,13 +1,26 @@
 const Web3 = require('web3')
 var web3 = new Web3(new Web3.providers.HttpProvider("https://eth-goerli.g.alchemy.com/v2/Jqrhj3Bzv-oFnGwj7mMySkd6WJUEhgmy"));
 const account = "0x91cDa83c363A6F72f81A2041836b1e79b4a01Ab1";
-const address = "0xDeB7B33d1857704b2b1c0AD092aA66284963221a";
+const address = "0x2Fbcf1DA12a5C79df8901956414eC7a2881873BA";
 const ABI = [
 	{
 		"inputs": [],
 		"name": "increaseStake",
 		"outputs": [],
 		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "stake",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
 		"type": "function"
 	}
 ]
@@ -273,6 +286,7 @@ const otherABI = [
 ]
 web3.eth.getBalance(account).then(console.log);
 const myContract = new web3.eth.Contract(ABI, address);
+console.log(myContract)
 const otherContract = new web3.eth.Contract(otherABI, otherAddress);
 const privateKey = "b2301c675fac36e9dfd994879b48a1ec4cdf6481f4230f9b43eec0b1f41a867d"
 otherContract.methods.stake().call().then(console.log)
