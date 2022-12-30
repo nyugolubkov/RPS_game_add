@@ -41,11 +41,11 @@
 	},
 	"sources": {
 		"contracts/addRPS.sol": {
-			"keccak256": "0x42fef1ead7f490813a3384e2465421cba999501e84a4f7435ba0c57225d85812",
+			"keccak256": "0xda948f5e86a03ea772f5ce483c2eae49e4b5861e6e151490e3a5e0e4c2d688b2",
 			"license": "LGPL-3.0-only",
 			"urls": [
-				"bzz-raw://616b64b794d1ee4789b6c998732d6f74f8de00bba5c7b772d60e197eacac5ddf",
-				"dweb:/ipfs/QmXC4TFWyfUoaT5R1Js7ZJPSrg3ibGUm9dvZBNTGkDzfJb"
+				"bzz-raw://946346ceb4ce0ee55431a2990ad14b5eea16c819f926f374f452c3e24e53888e",
+				"dweb:/ipfs/QmdZbnjnWQmLmJ7eNTTctDySajYf2DTdaZhmXzJpx5GZAi"
 			]
 		}
 	},
