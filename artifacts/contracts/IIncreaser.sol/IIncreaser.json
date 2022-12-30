@@ -1,7 +1,7 @@
 {
   "_format": "hh-sol-artifact-1",
   "contractName": "IIncreaser",
-  "sourceName": "contracts/addRPS.sol",
+  "sourceName": "contracts/IIncreaser.sol",
   "abi": [
     {
       "inputs": [],

@@ -1,18 +1,17 @@
 const Web3 = require('web3')
 var web3 = new Web3(new Web3.providers.HttpProvider("https://eth-goerli.g.alchemy.com/v2/Jqrhj3Bzv-oFnGwj7mMySkd6WJUEhgmy"));
 const account = "0x91cDa83c363A6F72f81A2041836b1e79b4a01Ab1";
-const address = "0x6e32B893010b40c902Ce736D67b3e7BEF070150A";
+const address = "0x42366d71FFb5176B45f92CB26267C5411f7A30d6";
 const ABI = [
 	{
-		"inputs": [],
-		"name": "increaseStake",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "stake",
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_add",
+				"type": "address"
+			}
+		],
+		"name": "getStake",
 		"outputs": [
 			{
 				"internalType": "uint256",
@@ -21,6 +20,19 @@ const ABI = [
 			}
 		],
 		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_add",
+				"type": "address"
+			}
+		],
+		"name": "increase",
+		"outputs": [],
+		"stateMutability": "nonpayable",
 		"type": "function"
 	}
 ]
@@ -286,7 +298,6 @@ const otherABI = [
 ]
 web3.eth.getBalance(account).then(console.log);
 const myContract = new web3.eth.Contract(ABI, address);
-console.log(myContract)
 const otherContract = new web3.eth.Contract(otherABI, otherAddress);
 const privateKey = "b2301c675fac36e9dfd994879b48a1ec4cdf6481f4230f9b43eec0b1f41a867d"
 otherContract.methods.stake().call().then(console.log)
@@ -294,8 +305,8 @@ async function increaseOtherContract() {
     let tx = {
         from: account,
         to: address,
-        gas: 100000,
-        value: 10000,
+        gas: 500000,
+        value: 50000,
         data: myContract.methods.increase(otherAddress).encodeABI()
     }
     let signature = await web3.eth.accounts.signTransaction(tx, privateKey);
@@ -305,6 +316,7 @@ async function increaseOtherContract() {
             console.log(receipt)
             console.log('Increased')
             otherContract.methods.stake().call().then(console.log)
+            myContract.methods.getStake(otherAddress).call().then(console.log)
         });
 }
 increaseOtherContract()

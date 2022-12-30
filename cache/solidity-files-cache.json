@@ -2,9 +2,46 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "C:\\Users\\Пользователь\\Desktop\\Мои файлы\\Учеба 4 курс\\СМК\\hardhat-new\\add\\contracts\\addRPS.sol": {
-      "lastModificationDate": 1672421034592,
-      "contentHash": "3d124cd4c178a6c0e9cb87dc216d20c0",
+      "lastModificationDate": 1672421627923,
+      "contentHash": "21a183dd87ebb8e459a314a4cdd077fd",
       "sourceName": "contracts/addRPS.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IIncreaser.sol"
+      ],
+      "versionPragmas": [
+        ">=0.8.0 <0.9.0"
+      ],
+      "artifacts": [
+        "addRPS"
+      ]
+    },
+    "C:\\Users\\Пользователь\\Desktop\\Мои файлы\\Учеба 4 курс\\СМК\\hardhat-new\\add\\contracts\\IIncreaser.sol": {
+      "lastModificationDate": 1672421587956,
+      "contentHash": "c86c39fb5c85c3bf6a7a2d373bbfc14b",
+      "sourceName": "contracts/IIncreaser.sol",
       "solcConfig": {
         "version": "0.8.17",
         "settings": {
@@ -33,8 +70,7 @@
         ">=0.8.0 <0.9.0"
       ],
       "artifacts": [
-        "IIncreaser",
-        "addRPS"
+        "IIncreaser"
       ]
     }
   }

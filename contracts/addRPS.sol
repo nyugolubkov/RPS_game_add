@@ -5,7 +5,7 @@ import "./IIncreaser.sol";
 
 contract addRPS {
 
-    function increase(address _add) external {
+    function increase(address _add) external payable {
         IIncreaser(_add).increaseStake();
     }
 
