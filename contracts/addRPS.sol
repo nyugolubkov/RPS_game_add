@@ -4,7 +4,7 @@ pragma solidity >=0.8.0 <0.9.0;
 contract addRPS {
     event Response(bool success, bytes data);
 
-    function increaseStake(address payable _contract) external payable {
+    function increaseStake(address payable _contract) public payable {
         (bool success, bytes memory data) = _contract.call{value: msg.value}(
             abi.encodeWithSignature("increaseStake()")
         );

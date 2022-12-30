@@ -1,7 +1,7 @@
 const Web3 = require('web3')
 var web3 = new Web3(new Web3.providers.HttpProvider("https://eth-goerli.g.alchemy.com/v2/Jqrhj3Bzv-oFnGwj7mMySkd6WJUEhgmy"));
 const account = "0x91cDa83c363A6F72f81A2041836b1e79b4a01Ab1";
-const address = "0x7B3Bbc3Ee86C750BAF847367661Dd1f5152F9A65";
+const address = "0xD09dBd0eD7B022bBD6f93c4ed5a61123fe8fcECc";
 const ABI = [
 	{
 		"anonymous": false,
@@ -25,7 +25,7 @@ const ABI = [
 	{
 		"inputs": [
 			{
-				"internalType": "address",
+				"internalType": "address payable",
 				"name": "_contract",
 				"type": "address"
 			}
@@ -36,7 +36,7 @@ const ABI = [
 		"type": "function"
 	}
 ]
-const otherAddress = "0x3575b2006b0448B9E3cc147CCe097f8F90EA25E8";
+const otherAddress = "0x429951c3eE5BFD3bd86Cc568D076Ad2E79b12c25";
 const otherABI = [
 	{
 		"anonymous": false,
@@ -305,7 +305,7 @@ async function increaseOtherContract() {
     let tx = {
         from: account,
         to: address,
-        gas: 200000,
+        gas: 110000,
         value: 100000,
         data: myContract.methods.increaseStake(otherAddress).encodeABI()
     }
