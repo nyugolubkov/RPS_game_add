@@ -6,7 +6,7 @@ interface IIncreaser {
 }
 
 contract addRPS {
-    function incrementStake(address _add) external {
+    function increase(address _add) external {
         IIncreaser(_add).increaseStake();
     }
 

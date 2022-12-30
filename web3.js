@@ -1,38 +1,13 @@
 const Web3 = require('web3')
 var web3 = new Web3(new Web3.providers.HttpProvider("https://eth-goerli.g.alchemy.com/v2/Jqrhj3Bzv-oFnGwj7mMySkd6WJUEhgmy"));
 const account = "0x91cDa83c363A6F72f81A2041836b1e79b4a01Ab1";
-const address = "0xfA676f490C902C42d1699Ef885C3Dfd965964473";
+const address = "0x19F0910ac15120Be90B464Cb8ab5f4cee5cf88DE";
 const ABI = [
 	{
-		"anonymous": false,
-		"inputs": [
-			{
-				"indexed": false,
-				"internalType": "bool",
-				"name": "success",
-				"type": "bool"
-			},
-			{
-				"indexed": false,
-				"internalType": "bytes",
-				"name": "data",
-				"type": "bytes"
-			}
-		],
-		"name": "Response",
-		"type": "event"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address payable",
-				"name": "_contract",
-				"type": "address"
-			}
-		],
+		"inputs": [],
 		"name": "increaseStake",
 		"outputs": [],
-		"stateMutability": "payable",
+		"stateMutability": "nonpayable",
 		"type": "function"
 	}
 ]
@@ -305,9 +280,9 @@ async function increaseOtherContract() {
     let tx = {
         from: account,
         to: address,
-        gas: 1000000,
-        value: 100000,
-        data: myContract.methods.increaseStake(otherAddress).encodeABI()
+        gas: 100000,
+        value: 10000,
+        data: myContract.methods.increase(otherAddress).encodeABI()
     }
     let signature = await web3.eth.accounts.signTransaction(tx, privateKey);
     web3.eth.sendSignedTransaction(signature.rawTransaction)
