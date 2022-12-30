@@ -2,12 +2,19 @@
 pragma solidity >=0.8.0 <0.9.0;
 
 interface IIncreaser {
+    function stake() external view returns (uint);
+    
     function increaseStake() external;
+
 }
 
 contract addRPS {
+
     function increase(address _add) external {
         IIncreaser(_add).increaseStake();
     }
 
+    function getStake(address _add) external view returns (uint) {
+        return IIncreaser(_add).stake();
+    }
 }
