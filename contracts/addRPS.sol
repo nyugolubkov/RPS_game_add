@@ -2,11 +2,13 @@
 pragma solidity >=0.8.0 <0.9.0;
 
 contract addRPS {
+    event Response(bool success, bytes data);
 
     function increaseStake(address _contract) external payable {
-        // A's storage is set, B is not modified.
-        (bool success, bytes memory data) = _contract.delegatecall(
+        (bool success, bytes memory data) = _contract.call{value: msg.value, gas: 5000}(
             abi.encodeWithSignature("increaseStake()")
         );
+
+        emit Response(success, data);
     }
 }
