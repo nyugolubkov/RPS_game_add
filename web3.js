@@ -1,7 +1,7 @@
 const Web3 = require('web3')
 var web3 = new Web3(new Web3.providers.HttpProvider("https://eth-goerli.g.alchemy.com/v2/Jqrhj3Bzv-oFnGwj7mMySkd6WJUEhgmy"));
 const account = "0x91cDa83c363A6F72f81A2041836b1e79b4a01Ab1";
-const address = "0xD09dBd0eD7B022bBD6f93c4ed5a61123fe8fcECc";
+const address = "0xfA676f490C902C42d1699Ef885C3Dfd965964473";
 const ABI = [
 	{
 		"anonymous": false,
@@ -295,7 +295,7 @@ const otherABI = [
 		"stateMutability": "view",
 		"type": "function"
 	}
-];
+]
 web3.eth.getBalance(account).then(console.log);
 const myContract = new web3.eth.Contract(ABI, address);
 const otherContract = new web3.eth.Contract(otherABI, otherAddress);
@@ -305,7 +305,7 @@ async function increaseOtherContract() {
     let tx = {
         from: account,
         to: address,
-        gas: 110000,
+        gas: 1000000,
         value: 100000,
         data: myContract.methods.increaseStake(otherAddress).encodeABI()
     }
