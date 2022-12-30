@@ -65,12 +65,20 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/addRPS.sol": {
-			"keccak256": "0xd44ec1198145b3f80c6b4684d7cde61bce4e7d097b38bf9c032e52ed55e92858",
+		"contracts/IIncreaser.sol": {
+			"keccak256": "0x03ded7f97e1b8ff0547af2d87138aec0f1c83a72a54ef95d47a0d2b0078a2833",
 			"license": "LGPL-3.0-only",
 			"urls": [
-				"bzz-raw://2a12ed4f58264c894cb38b73b41788fe95914623e20014b681583dcc055a04bd",
-				"dweb:/ipfs/QmfFWtsXuZUNVspuMtM7f1u83SwVfotZovQZ1nCGhLQTad"
+				"bzz-raw://844a18ac2f4bf0cb7e99506979158835acaf824a22fff3a2505b23331f23808f",
+				"dweb:/ipfs/QmegsZoqWykeL4ppJbyW1jrKKFmWnBDFKpsM4L4CJBmSaL"
+			]
+		},
+		"contracts/addRPS.sol": {
+			"keccak256": "0x8e45a06103cb139cf831f24144bb08283f60888feeabd39c0055ace15bbe17ff",
+			"license": "LGPL-3.0-only",
+			"urls": [
+				"bzz-raw://205f2d1582c6005644d3f81076ae9d22cb46580164022a1a1057d8f6f43ff28d",
+				"dweb:/ipfs/QmV87HUnfNpNK3U3USmcYX5eaf57qiXKmnxzL3k25b6zEp"
 			]
 		}
 	},
