@@ -1,0 +1,59 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_contract",
+						"type": "address"
+					}
+				],
+				"name": "increaseStake",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/addRPS.sol": "addRPS"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/addRPS.sol": {
+			"keccak256": "0xd4dc9bf8a686490aced818343d5d43280d65506293cf19e4f69cdc449e585e27",
+			"license": "LGPL-3.0-only",
+			"urls": [
+				"bzz-raw://d5e5c16fb8b94791215e5183efdadc0625f73338004f04b3117ca9c342f966e8",
+				"dweb:/ipfs/QmcG7SySUTcsbdkbnRTMVcPgziVdSXvBdfkSqmTy1eJ8vZ"
+			]
+		}
+	},
+	"version": 1
+}
