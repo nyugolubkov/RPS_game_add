@@ -34,7 +34,7 @@
 				],
 				"name": "increase",
 				"outputs": [],
-				"stateMutability": "nonpayable",
+				"stateMutability": "payable",
 				"type": "function"
 			}
 		],
@@ -74,11 +74,11 @@
 			]
 		},
 		"contracts/addRPS.sol": {
-			"keccak256": "0x8e45a06103cb139cf831f24144bb08283f60888feeabd39c0055ace15bbe17ff",
+			"keccak256": "0x29401623685219f5969d8e153cb9d562250635a4568097147a23594300b7f42d",
 			"license": "LGPL-3.0-only",
 			"urls": [
-				"bzz-raw://205f2d1582c6005644d3f81076ae9d22cb46580164022a1a1057d8f6f43ff28d",
-				"dweb:/ipfs/QmV87HUnfNpNK3U3USmcYX5eaf57qiXKmnxzL3k25b6zEp"
+				"bzz-raw://d0a63f01fbe6e23e11a356b7127dd8602e6d3dd12ad351f6f5ee11185234faf9",
+				"dweb:/ipfs/QmTBunonF9AXFJp44it9DkGiU13YSsknhT7htZukz8nzcu"
 			]
 		}
 	},
