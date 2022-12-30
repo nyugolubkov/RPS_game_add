@@ -6,14 +6,8 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "_add",
-						"type": "address"
-					}
-				],
-				"name": "incrementStake",
+				"inputs": [],
+				"name": "increaseStake",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -32,7 +26,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/addRPS.sol": "addRPS"
+			"contracts/addRPS.sol": "IIncreaser"
 		},
 		"evmVersion": "london",
 		"libraries": {},
