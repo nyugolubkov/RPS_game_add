@@ -1,7 +1,7 @@
 const Web3 = require('web3')
 var web3 = new Web3(new Web3.providers.HttpProvider("https://eth-goerli.g.alchemy.com/v2/Jqrhj3Bzv-oFnGwj7mMySkd6WJUEhgmy"));
 const account = "0x91cDa83c363A6F72f81A2041836b1e79b4a01Ab1";
-const address = "0x855Ab0Da32B9362924A9e3d6AC66883Dc4307756";
+const address = "0x7B3Bbc3Ee86C750BAF847367661Dd1f5152F9A65";
 const ABI = [
 	{
 		"anonymous": false,
