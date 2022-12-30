@@ -11,6 +11,19 @@
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "stake",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -41,11 +54,11 @@
 	},
 	"sources": {
 		"contracts/addRPS.sol": {
-			"keccak256": "0xda948f5e86a03ea772f5ce483c2eae49e4b5861e6e151490e3a5e0e4c2d688b2",
+			"keccak256": "0x6fedd44619a7f6ce2082c8ad591a0e6ea168ca44e9fea6d0e53d6548f519fb22",
 			"license": "LGPL-3.0-only",
 			"urls": [
-				"bzz-raw://946346ceb4ce0ee55431a2990ad14b5eea16c819f926f374f452c3e24e53888e",
-				"dweb:/ipfs/QmdZbnjnWQmLmJ7eNTTctDySajYf2DTdaZhmXzJpx5GZAi"
+				"bzz-raw://0cfaf8cbe3019fe61cb776fde6bed2e85bc2100c7349d9a8ed0f390f390a5d9b",
+				"dweb:/ipfs/QmWwmL8A3WYJWYPmqJRK75r1Ztc1oBnPzbriCWWzMECQCr"
 			]
 		}
 	},
